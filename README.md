@@ -7,7 +7,7 @@
 
 ## Project Information
 ### Folder structure
-Assets
+- Assets
  ├── css
 - ├── Pages
 - │   ├── about.html
