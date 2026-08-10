@@ -8,11 +8,11 @@
 ## Project Information
 ### Folder structure
 Assets
-- ├── css
+ ├── css
 - ├── Pages
 - │   ├── about.html
 - │   ├── contact.html
--│   ├── deals.html
+- ├── deals.html
 - │   ├── enquiry.html
 - │   ├── faq.html
 - │   └── products.html
