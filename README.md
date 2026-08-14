@@ -68,17 +68,6 @@ AetherTech is a technology retail website offering modern technology products, a
 - Final review	16.09.26
 - Project submitted	19.09.26
 
-## Sitemap
-                         AETHERTECH
-                             |
-                           HOME
-                        (index.html)
-                             |
-        ------------------------------------------------
-        |          |          |         |       |       |
-     ABOUT      PRODUCTS     DEALS    ENQUIRY   FAQ   CONTACT
-   (about.html) (products.html) (deals.html) (enquiry.html) (faq.html) (contact.html)
-
    ## References
 - 5 Minutes SEO (2024) Website Goals and Objectives to Set (With Examples). Available at: https://5minutesseo.com/seo/website-goals-objectives-to-set-with-examples/ (Accessed: 5 August 2026).
 99designs (2024) Retail Website Design Inspiration. Available at: https://99designs.com/inspiration/websites/retail (Accessed: 5 August 2026).
