@@ -60,13 +60,13 @@ AetherTech is a technology retail website offering modern technology products, a
 •	External navigation: Links such as "View Products", "View Deals", "Make an Enquiry" and "Contact Us" take users to the relevant pages. 
 
 ## Timeline and Milestones
-Milestone	Target
-Website Proposal	14.08.26
-Website structure developed	29.08.26
-Website functionality	8.09.26
-Website testing	12.09.26
-Final review	16.09.26
-Project submitted	19.09.26
+- Milestone	Target
+- Website Proposal	14.08.26
+- Website structure developed	29.08.26
+- Website functionality	8.09.26
+- Website testing	12.09.26
+- Final review	16.09.26
+- Project submitted	19.09.26
 
 ## Sitemap
                          AETHERTECH
