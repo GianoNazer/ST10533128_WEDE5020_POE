@@ -11,14 +11,17 @@ AetherTech is a technology retail website offering modern technology products, a
 ## Project Information
 ### Folder structure
 - Assets
- ├── css
+- ├── Css
+- │   ├── style.css
+- ├── js
 - ├── Pages
 - │   ├── about.html
 - │   ├── contact.html
-- ├── deals.html
+- │   ├── deals.html
 - │   ├── enquiry.html
 - │   ├── faq.html
 - │   └── products.html
 - │
+- ├── .gitattributes
 - ├── index.html
 - └── README.md
