@@ -74,3 +74,99 @@ hr {
     border-top: 1px solid #DDE3E9;
     margin: 20px 0;
 }
+
+/* Typography */
+
+/* Site Name (h1) */
+h1 {
+    background-color: #1B2A4A;
+    color: #FFFFFF;
+    padding: 30px 5% 5px;
+    margin: 0;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Tagline (p right after h1) */
+h1 + p {
+    background-color: #1B2A4A;
+    color: #7BA7BC;
+    padding: 0 5% 25px;
+    margin: 0;
+    width: 100%;
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Nav links typography */
+h1 + p ~ a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Content Heading Typography */
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #333333;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1B2A4A;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1B2A4A;
+}
+
+/* Body text */
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+}
+
+/* Form labels */
+label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #333333;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Footer copyright */
+h3:last-of-type ~ p:last-of-type {
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
