@@ -706,3 +706,120 @@ iframe {
         scroll-behavior: auto !important;
     }
 }
+
+/* Center all text site-wide */
+body {
+    text-align: center;
+}
+
+/*  Header */
+h1 {
+    text-align: center;
+    padding: 30px 5% 5px;
+}
+
+h1 + p {
+    text-align: center;
+    padding: 0 5% 25px;
+}
+
+/*  Navigation: center the group of links  */
+h1 + p ~ a {
+    display: inline-block;
+    text-align: center;
+}
+
+/* Remove the first-link left padding so links sit exactly in the middle */
+h1 + p + a {
+    padding-left: 18px;
+}
+
+/*  Headings  */
+h2, h3, h4 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    max-width: 800px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/*  Paragraphs & Lists  */
+p {
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+ul, ol {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 15px;
+    padding-left: 25px;
+}
+
+li {
+    text-align: left;
+}
+
+/*  Images */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+/*  Forms: center the box but keep labels readable  */
+form {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: left;
+}
+
+label {
+    text-align: left;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    display: inline-block;
+}
+
+/*  Maps (iframes)  */
+iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+/*  Footer  */
+h3:last-of-type {
+    text-align: center;
+}
+
+h3:last-of-type ~ p {
+    text-align: center;
+}
+
+/*  Mobile responsive fix */
+@media (max-width: 768px) {
+    h1 + p ~ a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 14px 5%;
+    }
+    
+    h1 + p + a {
+        padding-left: 5%;
+    }
+}
