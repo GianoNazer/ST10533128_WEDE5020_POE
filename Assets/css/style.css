@@ -506,3 +506,203 @@ button:focus {
     background-color: #7BA7BC;
     color: #FFFFFF;
 }
+
+/*  Responsive Design */
+
+
+/* Tablet 900px and below */
+@media (max-width: 900px) {
+
+    h1 {
+        font-size: 1.6rem;
+        padding: 25px 5% 5px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h1 + p ~ a {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+
+    iframe {
+        height: 280px;
+    }
+}
+
+/* Mobile 768px and below */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.4rem;
+        padding: 20px 5% 5px;
+        letter-spacing: 1px;
+    }
+
+    h1 + p {
+        font-size: 0.85rem;
+        padding: 0 5% 18px;
+    }
+
+    /* Nav links stack vertically */
+    h1 + p ~ a {
+        display: block;
+        width: 100%;
+        padding: 14px 5%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-right: none;
+        box-sizing: border-box;
+        font-size: 0.9rem;
+    }
+
+    h1 + p + a {
+        padding-left: 5%;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        margin: 25px 5% 12px;
+    }
+
+    h3 {
+        font-size: 1.05rem;
+        margin: 20px 5% 8px;
+    }
+
+    p, ul, ol {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
+
+    img {
+        max-width: 92%;
+        margin: 12px auto;
+        display: block;
+    }
+
+    form {
+        padding: 20px;
+        margin: 20px 5% 30px;
+        max-width: 100%;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+        display: block;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding: 12px 20px;
+    }
+
+    iframe {
+        height: 220px;
+        margin: 12px 5%;
+        max-width: 90%;
+    }
+
+    h3:last-of-type {
+        font-size: 1.05rem;
+        padding: 25px 5% 8px;
+    }
+
+    h3:last-of-type ~ p {
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Mobile 480px and below */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.2rem;
+        padding: 18px 5% 5px;
+        letter-spacing: 0.5px;
+    }
+
+    h1 + p {
+        font-size: 0.8rem;
+        padding: 0 5% 15px;
+    }
+
+    h1 + p ~ a {
+        padding: 12px 5%;
+        font-size: 0.85rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    p, ul, ol {
+        font-size: 0.9rem;
+    }
+
+    img {
+        max-width: 95%;
+    }
+
+    form {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        font-size: 0.9rem;
+        padding: 9px;
+    }
+
+    iframe {
+        height: 180px;
+    }
+
+    h3:last-of-type {
+        font-size: 1rem;
+        padding: 22px 5% 8px;
+    }
+
+    h3:last-of-type ~ p {
+        font-size: 0.8rem;
+        padding: 4px 5%;
+    }
+}
+
+/* Image Optimisation */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive iframes */
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+/* Reduced Motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
