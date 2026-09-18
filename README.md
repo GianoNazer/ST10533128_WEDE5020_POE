@@ -68,6 +68,77 @@ AetherTech is a technology retail website offering modern technology products, a
 - Final review	16.09.26
 - Project submitted	19.09.26
 
+## Part 2 - CSS Styling and Responsive Design
+### Sections in my CSS
+
+**1. Base styles**
+Reset all margins and padding, set Open Sans as the font, set up default heading and paragraph styles.
+
+**2. Typography**
+Used Open Sans from Google Fonts. Headings are bold (700), body text is regular (400). Set different font sizes for h1, h2, h3 and h4, and added some letter spacing to make it look cleaner.
+
+**3. Layout**
+Header is a full width navy bar with the site name and tagline. Nav links are inline. Content has 5% margins on the sides. Forms are in a grey box. Footer is also full width navy.
+
+**4. Visual styles**
+Used my colour scheme throughout. I added box shadows to the header, images, forms and buttons. Added hover effects on links, buttons and images. Added focus outlines for keyboard users.
+
+**5. Responsive design**
+Used 3 media queries so the site works on different screen sizes:
+- 900px and below (tablet) - smaller headings
+- 768px and below (mobile) - nav links stack on top of each other, forms go full width, buttons go full width
+- 480px and below (small mobile) - even smaller text
+
+Used rem and % for sizes so everything scales properly.
+
+### Changelog
+
+**Commit 1 - Add base styles and CSS reset**
+- Created the css file and linked it to all pages
+- Added the reset
+- Set Open Sans as the font
+- Set default heading and paragraph styles
+
+**Commit 2 - Add typography styles**
+- Imported Open Sans
+- Set heading sizes and font weights
+- Added letter spacing
+- Styled the site name and tagline
+
+**Commit 3 - Add layout structure**
+- Made header and tagline full width navy
+- Styled nav links
+- Set content margins and max widths
+- Boxed the forms
+- Made footer full width
+- Hid the hr lines
+
+**Commit 4 - Add visual styles**
+- Applied the colour scheme
+- Added shadows to header, images, forms and buttons
+- Added hover, focus and active effects
+- Added custom text selection colour
+
+**Commit 5 - Add responsive design**
+- Added media queries for tablet, mobile and small mobile
+- Made nav stack on mobile
+- Made forms and buttons full width on mobile
+- Made images responsive so they don't overflow
+- Added prefers-reduced-motion for accessibility
+
+### Screenshots
+
+#### Desktop (1920px)
+![Desktop view](Screenshots\Desktop.png)
+
+#### Tablet (768px)
+![Tablet](Screenshots\Tablet.png)
+
+#### Mobile (375px)
+![Mobile](Screenshots\Mobile Phone.png)
+
+
+
    ## References
 - 5 Minutes SEO (2024) Website Goals and Objectives to Set (With Examples). Available at: https://5minutesseo.com/seo/website-goals-objectives-to-set-with-examples/ (Accessed: 5 August 2026).
 99designs (2024) Retail Website Design Inspiration. Available at: https://99designs.com/inspiration/websites/retail (Accessed: 5 August 2026).
