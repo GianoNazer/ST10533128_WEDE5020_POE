@@ -196,6 +196,96 @@
         Copyright © 2026 AetherTech
     </p>
 
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const phone   = document.getElementById('phone').value.trim();
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value.trim();
+
+        clearErrors();
+        let valid = true;
+
+        if (name.length < 2) {
+            showError('name', 'Please enter your full name.');
+            valid = false;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showError('email', 'Please enter a valid email address.');
+            valid = false;
+        }
+        if (!/^[0-9\s+()-]{10,}$/.test(phone)) {
+            showError('phone', 'Please enter a valid phone number (at least 10 digits).');
+            valid = false;
+        }
+        if (subject === '') {
+            showError('subject', 'Please select the type of message.');
+            valid = false;
+        }
+        if (message.length < 10) {
+            showError('message', 'Please write a message (at least 10 characters).');
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        const today = new Date().toLocaleDateString('en-ZA', {
+            year: 'numeric', month: 'long', day: 'numeric'
+        });
+
+        const emailText =
+'To: info@aethertech.com\n' +
+'From: ' + email + '\n' +
+'Date: ' + today + '\n' +
+'Subject: ' + subject + '\n\n' +
+'Dear AetherTech Team,\n\n' +
+'My name is ' + name + ' and I am contacting you regarding: ' + subject + '.\n\n' +
+message + '\n\n' +
+'You can reach me on ' + phone + ' or reply to ' + email + '.\n\n' +
+'Kind regards,\n' +
+name;
+
+        document.getElementById('contactEmailOutput').value = emailText;
+        document.getElementById('contactResponse').style.display = 'block';
+        document.getElementById('contactResponse').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    function copyEmail() {
+        const output = document.getElementById('contactEmailOutput');
+        output.select();
+        output.setSelectionRange(0, 99999);
+        navigator.clipboard.writeText(output.value).then(function () {
+            document.getElementById('copyStatus').innerText = '✓ Copied!';
+            setTimeout(function () {
+                document.getElementById('copyStatus').innerText = '';
+            }, 2500);
+        });
+    }
+
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorSpan = document.getElementById(fieldId + 'Error');
+        field.style.borderColor = '#C62828';
+        errorSpan.innerText = message;
+        errorSpan.style.display = 'block';
+        errorSpan.style.color = '#C62828';
+        errorSpan.style.fontSize = '0.85rem';
+        errorSpan.style.marginTop = '4px';
+    }
+
+    function clearErrors() {
+        document.querySelectorAll('.error').forEach(function (el) {
+            el.innerText = '';
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('input, select, textarea').forEach(function (el) {
+            el.style.borderColor = '';
+        });
+    }
+</script>
 </body>
 
 </html>
