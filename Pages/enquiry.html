@@ -40,77 +40,60 @@
 
     <!-- Enquiry Form -->
 
-    <form>
+    <form id="enquiryForm" novalidate>
 
-        <p>
-            <label>First Name:</label>
-            <br>
-            <input type="text" name="firstname">
-        </p>
+    <p>
+        <label for="firstname">First Name:</label><br>
+        <input type="text" id="firstname" name="firstname">
+        <span class="error" id="firstnameError"></span>
+    </p>
 
+    <p>
+        <label for="lastname">Last Name:</label><br>
+        <input type="text" id="lastname" name="lastname">
+        <span class="error" id="lastnameError"></span>
+    </p>
 
-        <p>
-            <label>Last Name:</label>
-            <br>
-            <input type="text" name="lastname">
-        </p>
+    <p>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email">
+        <span class="error" id="emailError"></span>
+    </p>
 
+    <p>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" name="phone">
+        <span class="error" id="phoneError"></span>
+    </p>
 
-        <p>
-            <label>Email Address:</label>
-            <br>
-            <input type="email" name="email">
-        </p>
+    <p>
+        <label for="subject">What is your enquiry about?</label><br>
+        <select id="subject" name="subject">
+            <option value="">-- Select an option --</option>
+            <option value="Products">Products</option>
+            <option value="Deals">Deals</option>
+            <option value="Orders">Orders</option>
+            <option value="Delivery">Delivery</option>
+            <option value="Payment">Payment</option>
+            <option value="Become a Volunteer">Become a Volunteer</option>
+            <option value="Become a Sponsor">Become a Sponsor</option>
+            <option value="Other">Other</option>
+        </select>
+        <span class="error" id="subjectError"></span>
+    </p>
 
+    <p>
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="6" cols="40"></textarea>
+        <span class="error" id="messageError"></span>
+    </p>
 
-        <p>
-            <label>Phone Number:</label>
-            <br>
-            <input type="text" name="phone">
-        </p>
+    <p>
+        <input type="submit" value="Send Enquiry">
+        <input type="reset" value="Clear">
+    </p>
 
-
-        <p>
-            <label>What is your enquiry about?</label>
-            <br>
-
-            <select name="subject">
-
-                <option>Products</option>
-
-                <option>Deals</option>
-
-                <option>Orders</option>
-
-                <option>Delivery</option>
-
-                <option>Payment</option>
-
-                <option>Other</option>
-
-            </select>
-
-        </p>
-
-
-        <p>
-            <label>Your Message:</label>
-            <br>
-
-            <textarea name="message" rows="6" cols="40"></textarea>
-
-        </p>
-
-
-        <p>
-
-            <input type="submit" value="Send Enquiry">
-
-            <input type="reset" value="Clear">
-
-        </p>
-
-    </form>
+</form>
 
     <hr>
 
