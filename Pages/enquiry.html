@@ -8,6 +8,8 @@
 <link rel="stylesheet" href="../Assets/css/style.css">
 </head>
 
+
+
 <body>
 
     <!-- Navigation -->
@@ -147,6 +149,98 @@
     <p>
         Copyright © 2026 AetherTech
     </p>
+
+    <script>
+    document.getElementById('enquiryForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const firstname = document.getElementById('firstname').value.trim();
+        const lastname  = document.getElementById('lastname').value.trim();
+        const email     = document.getElementById('email').value.trim();
+        const phone     = document.getElementById('phone').value.trim();
+        const subject   = document.getElementById('subject').value;
+        const product   = document.getElementById('product').value;
+        const message   = document.getElementById('message').value.trim();
+
+        clearErrors();
+        let valid = true;
+
+        if (firstname === '') {
+            showError('firstname', 'Please enter your first name.');
+            valid = false;
+        }
+        if (lastname === '') {
+            showError('lastname', 'Please enter your last name.');
+            valid = false;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showError('email', 'Please enter a valid email address.');
+            valid = false;
+        }
+        if (!/^[0-9\s+()-]{10,}$/.test(phone)) {
+            showError('phone', 'Please enter a valid phone number (at least 10 digits).');
+            valid = false;
+        }
+        if (subject === '') {
+            showError('subject', 'Please select an option.');
+            valid = false;
+        }
+        if (message.length < 10) {
+            showError('message', 'Please write a message (at least 10 characters).');
+            valid = false;
+        }
+
+        if (!valid) return;
+
+        const productInfo = {
+            'Lenovo IdeaPad 3':       { price: 'R11,999', stock: 'In stock' },
+            'Samsung Galaxy A56 5G':  { price: 'R7,499',  stock: 'In stock' },
+            'PlayStation 5 Slim':     { price: 'R12,999', stock: 'Low stock (3 left)' },
+            'JBL Tune 770NC':         { price: 'R1,699',  stock: 'In stock' },
+            'Computer Components':    { price: 'from R499', stock: 'In stock' },
+            'Smart Home Devices':     { price: 'from R699', stock: 'Pre-order only' }
+        };
+
+        let response = '';
+
+        if (subject === 'Become a Volunteer') {
+            response = 'Hi ' + firstname + ', thank you for your interest in volunteering at AetherTech. Our team will contact you at ' + email + ' within 2 working days with more information.';
+        } else if (subject === 'Become a Sponsor') {
+            response = 'Hi ' + firstname + ', thank you for your interest in sponsoring AetherTech. Our marketing team will contact you at ' + email + ' within 2 working days to discuss the sponsorship opportunity.';
+        } else if (product && productInfo[product]) {
+            response = 'Hi ' + firstname + ', thank you for your enquiry about the ' + product + '.\n\nPrice: ' + productInfo[product].price + '\nAvailability: ' + productInfo[product].stock + '\n\nYour ' + subject.toLowerCase() + ' enquiry has been received and we will reply to ' + email + ' within 24 hours.';
+        } else {
+            response = 'Hi ' + firstname + ', thank you for your ' + subject.toLowerCase() + ' enquiry. We have received your message and will reply to ' + email + ' within 24 hours.';
+        }
+
+        const responseBox = document.getElementById('enquiryResponse');
+        const responseText = document.getElementById('enquiryResponseText');
+        responseText.innerText = response;
+        responseBox.style.display = 'block';
+        responseBox.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    function showError(fieldId, message) {
+        const field = document.getElementById(fieldId);
+        const errorSpan = document.getElementById(fieldId + 'Error');
+        field.style.borderColor = '#C62828';
+        errorSpan.innerText = message;
+        errorSpan.style.display = 'block';
+        errorSpan.style.color = '#C62828';
+        errorSpan.style.fontSize = '0.85rem';
+        errorSpan.style.marginTop = '4px';
+    }
+
+    function clearErrors() {
+        document.querySelectorAll('.error').forEach(function (el) {
+            el.innerText = '';
+            el.style.display = 'none';
+        });
+        document.querySelectorAll('input, select, textarea').forEach(function (el) {
+            el.style.borderColor = '';
+        });
+    }
+</script>
 
 </body>
 
