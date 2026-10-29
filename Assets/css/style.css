@@ -822,4 +822,30 @@ h3:last-of-type ~ p {
     h1 + p + a {
         padding-left: 5%;
     }
+
+/* ============================================================
+   PART 2 FEEDBACK FIXES: Pseudo-classes
+============================================================ */
+
+/* Button :focus state (when tabbed to via keyboard) */
+input[type="submit"]:focus, 
+input[type="reset"]:focus,
+button:focus {
+    outline: 3px solid #1B2A4A;
+    outline-offset: 3px;
+}
+
+/* Button :active state (when clicked/pressed down) */
+input[type="submit"]:active, 
+input[type="reset"]:active,
+button:active {
+    transform: translateY(2px); /* Pushes the button down visually */
+    box-shadow: none; /* Removes shadow so it looks "pressed in" */
+}
+
+/* Link :focus state */
+a:focus {
+    outline: 2px dashed #7BA7BC;
+    outline-offset: 2px;
+}
 }
