@@ -822,6 +822,7 @@ h3:last-of-type ~ p {
     h1 + p + a {
         padding-left: 5%;
     }
+}
 
 /* ============================================================
    PART 2 FEEDBACK FIXES: Pseudo-classes
@@ -848,4 +849,47 @@ a:focus {
     outline: 2px dashed #7BA7BC;
     outline-offset: 2px;
 }
+/* FAQ Accordion Styles */
+.faq-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.faq-item {
+    border: 1px solid #DDE3E9;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background-color: #F4F6F8;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1B2A4A;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s;
+}
+
+.faq-question:hover, .faq-question.active {
+    background-color: #7BA7BC;
+    color: white;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+}
+
+.faq-answer p {
+    padding: 15px 20px;
+    margin: 0;
 }
