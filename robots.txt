@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/GianoNazer/ST10533128_WEDE5020_POE
