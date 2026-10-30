@@ -80,4 +80,23 @@ document.addEventListener("DOMContentLoaded", function() {
             lightbox.style.display = "none";
         });
     }
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach(question => {
+        question.addEventListener("click", function() {
+            this.classList.toggle("active");
+            const answer = this.nextElementSibling;
+            const arrow = this.querySelector(".arrow");
+            
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                arrow.innerText = "▼";
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                arrow.innerText = "▲";
+            }
+        });
+    });
+
 });
