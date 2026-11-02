@@ -137,7 +137,33 @@ Used rem and % for sizes so everything scales properly.
 #### Mobile (375px)
 ![Mobile](Screenshots\Mobile Phone.png)
 
+## Part 3 - Functionality, SEO and Deployment
 
+### 1. JavaScript Interactivity (Part 3 Requirements)
+To enhance the user experience, I implemented custom JavaScript (`js/main.js`) to add the following dynamic features:
+- **Dynamic Search Filter:** A live search bar on the Products page that allows users to filter products instantly by name without reloading the page.
+- **Interactive Gallery (Lightbox):** Users can click on any product image to open it in a larger, full-screen modal overlay.
+- **FAQ Accordion:** A custom accordion on the FAQ page that smoothly expands and collapses answers when a question is clicked.
+- **Form Validation:** Client-side validation on the Enquiry and Contact forms to prevent submission of empty or invalid data (e.g., checking email formats and password lengths). The Contact form also dynamically compiles the user's input into an email format.
+
+### 2. Search Engine Optimisation (SEO)
+- **Meta Tags:** Added unique `<title>` and `<meta name="description">` tags to all 7 HTML pages to improve search engine rankings.
+- **Image Optimisation:** Ensured all images have descriptive `alt` attributes and relevant file names.
+- **robots.txt:** Created a `robots.txt` file in the root directory to instruct search engine crawlers.
+- **sitemap.xml:** Created a `sitemap.xml` file to provide a map of the website structure for search engines.
+
+### 3. Part 2 Feedback Fixes
+As per the feedback received for Part 2, I implemented the following corrections:
+- **CSS Pseudo-classes:** Added `:focus` states (for keyboard accessibility) and `:active` states (for button clicks) to fully meet the CSS visual styling requirements.
+- **Changelog Documentation:** This changelog has been updated to be more descriptive and track all improvements.
+- **Mobile Screenshot:** Added the required mobile view screenshot to the documentation to prove responsive design.
+
+### 4. Changelog (Part 3)
+- **Feat:** Added JavaScript validation and dynamic content to forms.
+- **Feat:** Implemented live product search and FAQ accordions.
+- **Feat:** Added interactive image lightbox for product galleries.
+- **SEO:** Added meta descriptions, robots.txt, and sitemap.xml.
+- **Fix:** Applied Part 2 feedback by adding missing CSS pseudo-classes.
 
    ## References
 - 5 Minutes SEO (2024) Website Goals and Objectives to Set (With Examples). Available at: https://5minutesseo.com/seo/website-goals-objectives-to-set-with-examples/ (Accessed: 5 August 2026).
