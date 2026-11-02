@@ -12,13 +12,15 @@ AetherTech is a technology retail website offering modern technology products, a
 - ├── Assets
 - ├── Css
 - │   ├── style.css
-- ├── js
 - ├── Images
 - │   ├── aethertechhero.png
+- │   ├── heroimage.png
 - │   ├── JBLTune770NC.png
 - │   ├── LenovoIdeaPad3.png
 - │   ├── PS5Slim.png
 - │   ├── SamsungGalaxyA565G.png
+- ├── js
+- │   ├── main.js
 - ├── Pages
 - │   ├── about.html
 - │   ├── contact.html
@@ -26,10 +28,15 @@ AetherTech is a technology retail website offering modern technology products, a
 - │   ├── enquiry.html
 - │   ├── faq.html
 - │   └── products.html
-- │
+- │├── ScreenShots
+- │   ├── Desktop.png
+- │   ├── Mobile Phone.png
+- │   ├── Tablet.png
 - ├── .gitattributes
 - ├── index.html
 - └── README.md
+- ├── robots.txt
+- └── Sitemap.xml
 
 ## Website goals and objectives
 - Increase online sales
