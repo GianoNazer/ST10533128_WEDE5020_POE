@@ -142,7 +142,7 @@ Used rem and % for sizes so everything scales properly.
 ![Tablet](Screenshots\Tablet.png)
 
 #### Mobile (375px)
-![Mobile](Screenshots\Mobile Phone.png)
+![Mobile](Screenshots\Mobile.png)
 
 ## Part 3 - Functionality, SEO and Deployment
 
