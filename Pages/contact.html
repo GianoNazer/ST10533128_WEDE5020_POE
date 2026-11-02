@@ -7,6 +7,9 @@
     <title>AetherTech - Contact Us</title>
     <meta name="description" content="Get in touch with AetherTech. Find our contact details, store locations in Port Elizabeth and Cape Town, or send us a direct message.">
 <link rel="stylesheet" href="../Assets/css/style.css">
+<!-- Leaflet Map CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -60,46 +63,15 @@
     <hr>
 
 
-    <!-- Location 1 -->
-
+        <!-- Our Locations -->
     <h2>Our Locations</h2>
+    
+    <h3>AetherTech Locations</h3>
+    <p>Port Elizabeth & Cape Town</p>
+    <p>Monday - Friday: 08:00 - 17:00</p>
 
-    <h3>AetherTech Port Elizabeth</h3>
-
-    <p>
-        Port Elizabeth, South Africa
-    </p>
-
-    <p>
-        Monday - Friday: 08:00 - 17:00
-    </p>
-
-    <iframe
-        src="https://www.google.com/maps?q=Gqeberha,South+Africa&output=embed"
-        width="500"
-        height="300">
-    </iframe>
-
-    <hr>
-
-
-    <!-- Location 2 -->
-
-    <h3>AetherTech Cape Town</h3>
-
-    <p>
-        Cape Town, South Africa
-    </p>
-
-    <p>
-        Monday - Friday: 08:00 - 17:00
-    </p>
-
-    <iframe
-        src="https://www.google.com/maps?q=Cape+Town,South+Africa&output=embed"
-        width="500"
-        height="300">
-    </iframe>
+    <!-- Interactive Leaflet Map -->
+    <div id="map" style="height: 400px; width: 90%; max-width: 800px; margin: 20px auto; border-radius: 10px; border: 2px solid #1B2A4A; z-index: 1;"></div>
 
     <hr>
 
@@ -113,7 +85,7 @@
         to you.
     </p>
 
-    <form id="contactForm" novalidate>
+    <form id="contactForm" action="#" method="POST" novalidate>
 
     <p>
         <label for="name">Full Name:</label><br>
@@ -287,6 +259,25 @@ name;
         });
     }
 </script>
+<script>
+        // Initialize the map
+        var map = L.map('map').setView([-33.9249, 18.4241], 6);
+
+        // Add the map tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+
+        // Marker for Cape Town
+        L.marker([-33.9249, 18.4241]).addTo(map)
+            .bindPopup('<b>AetherTech Cape Town</b><br>Monday - Friday: 08:00 - 17:00')
+            .openPopup();
+
+        // Marker for Port Elizabeth (Gqeberha)
+        L.marker([-33.9608, 25.6022]).addTo(map)
+            .bindPopup('<b>AetherTech Port Elizabeth</b><br>Monday - Friday: 08:00 - 17:00');
+    </script>
 </body>
 
 </html>
